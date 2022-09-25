@@ -1,0 +1,30 @@
+/*
+Pet Clinic management system:
+#Application (PCMS)
++ the user will interact with the system via a command line interface, where he/she can choose an option.
++ the desktop application will not have any visual friendly frames;
+
+PCMS_1: setup Hibernate infrastructure;
+PCMS_2: setup Hibernate model.
+PCSM_3: setup application architecture;
+_______________________________________________________________________________________________
+PCSM_4: implement a way for the user to interact with the system.
+PCMS_5: as a user I should be able to add a new veterinarian. I should be able to specify: first_name, last_name, address, speciality;
+PCMS_6: as a user I should be able to view the details of an existing veterinarian. I should be able to view the following details: id, first_name, last_mane, address, speciality.
+PCMS_7: as a user I should be able to update all existing veterinarian by id. I should be able to edit first_name, last_mane, address, speciality.
+PCMS_8: as a user I should be able to delete an existing veterinarian by choosing the id.
+PCMS_9: as a user I should be able to view all vets. I should be able to view the following data: id, first_name, last_mane.
+______________________________________________________________________________________________
+PCMS_10: as a user I should be able to add a new pet. I should be able to specify: race, birthdate, isVaccinated, ownerName;
+PCMS_11: as a user I should be able to view the details of an existing pet. I should be able to view the following details: id, race, birthdate, isVaccinated, ownerName.
+PCMS_12: as a user I should be able to update all existing pets by id. I should be able to edit race, birthdate, isVaccinated, ownerName.
+PCMS_13: as a user I should be able to delete an existing pet by choosing the id.
+PCMS_14: as a user I should be able to view all pets. I should be able to view the following data: id, race, ownerName.
+________________________________________________________________________________________________
+PCMS_15: As a user I should be able to add a new consult. I should be able to specify: consult_id, vet_id of an existing vet, pet_id of an existing pet, date, description.
+PCMS_16: As a user I should be able to view all the consults. I should be able to view the following data: vet_id of an existing vet, pet_id of an existing pet, date, description
+PCMS_17: As a user I should be able to update the description for a specific consult by choosing the id.
+PCMS_18: As a user I should be able to import all the data from a CSV file.
+PCMS_19: As a user I should be able to authenticate before using the application.
+
+*/
