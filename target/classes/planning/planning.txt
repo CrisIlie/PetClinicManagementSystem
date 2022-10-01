@@ -1,0 +1,32 @@
+/*
+Pet Clinic management system:
+#Application
++ the user will interact with the system via a command line interface, where he/she can choose an option.
++ the desktop application will not have any visual friendly frames;
+
+#Vet:
++ as a user I should be able to add a new veterinarian. I should be able to specify: first_name, last_name, address, speciality;
++ as a user I should be able to view the details of an existing veterinarian. I should be able to view the following details: id, first_name, last_mane, address, speciality.
++ as a user I should be able to update all existing veterinarian by id. I should be able to edit first_name, last_mane, address, speciality.
++ as a user I should be able to delete an existing veterinarian by choosing the id.
++ as a user I should be able to view all vets. I should be able to view the following data: id, first_name, last_mane.
+
+#Pet:
++ as a user I should be able to add a new pet. I should be able to specify: race, birthdate, isVaccinated, ownerName;
++ as a user I should be able to view the details of an existing pet. I should be able to view the following details: id, race, birthdate, isVaccinated, ownerName.
++ as a user I should be able to update all existing pets by id. I should be able to edit race, birthdate, isVaccinated, ownerName.
++ as a user I should be able to delete an existing pet by choosing the id.
++ as a user I should be able to view all pets. I should be able to view the following data: id, race, ownerName.
+
+#Consult:
++ As a user I should be able to add a new consult. I should be able to specify: consult_id, vet_id of an existing vet, pet_id of an existing pet, date, description.
++ As a user I should be able to view all the consults. I should be able to view the following data: vet_id of an existing vet, pet_id of an existing pet, date, description
++ As a user I should be able to update the description for a specific consult by choosing the id.
+
+#Import data:
++ As a user I should be able to import all the data from a CSV file.
+
+#Optional:
++ As a user I should be able to authenticate before using the application.
+
+*/
