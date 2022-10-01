@@ -7,6 +7,8 @@ public enum UserOption {
     VIEW_VET_BY_ID(3, "Find vet by id"),
 
     UPDATE_VET_BY_ID(4, "Update vet by id"),
+
+    DELETE_VET_BY_ID(5, "Delete vet by id"),
     EXIT(99, "Exit"),
     UNKNOWN(9999999, "Invalid option selected!");
     private final int numericOption;

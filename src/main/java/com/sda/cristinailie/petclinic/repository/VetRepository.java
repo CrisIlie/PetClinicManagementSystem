@@ -12,6 +12,7 @@ public interface VetRepository {
             String address,
             String speciality
     );
+
     List<Vet> getAllVets();
 
     Optional<Vet> findById(int id);
@@ -23,5 +24,8 @@ public interface VetRepository {
             String address,
             String speciality
     );
+
+    void deleteVetById(int id);
+
 
 }
