@@ -3,6 +3,8 @@ package com.sda.cristinailie.petclinic.controller;
 import com.sda.cristinailie.petclinic.model.Vet;
 import com.sda.cristinailie.petclinic.service.VetService;
 
+import java.util.InputMismatchException;
+import java.util.Optional;
 import java.util.Scanner;
 
 public class VetController {
@@ -36,6 +38,23 @@ public class VetController {
         System.out.println("Vet list: ");
         for(Vet vet : vetService.getAllVets()){
             System.out.println(vet.getId() + " " + vet.getFirstName() + " " + vet.getLastName());
+        }
+    }
+
+    public void showVetById(){
+        try {
+            System.out.println("Please insert an id: ");
+            int chosenId = Integer.parseInt(scanner.nextLine().trim());
+            Optional<Vet> optionalVet = vetService.findById(chosenId);
+            if (optionalVet.isPresent()) {
+                System.out.println(optionalVet.get());
+            } else {
+                System.out.println("Vet not found!");
+            }
+        }catch (NumberFormatException e){
+            System.err.println("Invalid id format!");
+        }catch (Exception e){
+            System.err.println("Internal server error!");
         }
     }
 }

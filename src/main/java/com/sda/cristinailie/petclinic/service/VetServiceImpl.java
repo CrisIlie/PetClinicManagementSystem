@@ -6,6 +6,7 @@ import com.sda.cristinailie.petclinic.utils.SessionManager;
 import org.hibernate.Session;
 
 import java.util.List;
+import java.util.Optional;
 
 public class VetServiceImpl implements VetService {
     private final VetRepository vetRepository;
@@ -37,6 +38,9 @@ public class VetServiceImpl implements VetService {
         return vetRepository.getAllVets();
     }
 
-
+    @Override
+    public Optional<Vet> findById(int id) {
+       return vetRepository.findById(id);
+    }
 }
 
