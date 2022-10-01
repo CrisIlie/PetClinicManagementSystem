@@ -8,7 +8,7 @@ DONE PCMS_1: setup Hibernate infrastructure;
 DONE PCMS_2: setup Hibernate model.
 DONE PCSM_3: setup application architecture;
 _______________________________________________________________________________________________
-PCSM_4: implement a way for the user to interact with the system.
+DONE PCSM_4: implement a way for the user to interact with the system.
 DONE PCMS_5: as a user I should be able to add a new veterinarian. I should be able to specify: first_name, last_name, address, speciality;
 PCMS_6: as a user I should be able to view the details of an existing veterinarian. I should be able to view the following details: id, first_name, last_mane, address, speciality.
 PCMS_7: as a user I should be able to update all existing veterinarian by id. I should be able to edit first_name, last_mane, address, speciality.

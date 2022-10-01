@@ -1,6 +1,11 @@
 package com.sda.cristinailie.petclinic.service;
 
+import com.sda.cristinailie.petclinic.model.Vet;
 import com.sda.cristinailie.petclinic.repository.VetRepository;
+import com.sda.cristinailie.petclinic.utils.SessionManager;
+import org.hibernate.Session;
+
+import java.util.List;
 
 public class VetServiceImpl implements VetService {
     private final VetRepository vetRepository;
@@ -26,5 +31,12 @@ public class VetServiceImpl implements VetService {
         vetRepository.createVet(firstName, lastName, address, speciality);
 
     }
+
+    @Override
+    public List<Vet> getAllVets() {
+        return vetRepository.getAllVets();
+    }
+
+
 }
 

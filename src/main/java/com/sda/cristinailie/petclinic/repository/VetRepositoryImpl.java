@@ -5,6 +5,8 @@ import com.sda.cristinailie.petclinic.utils.SessionManager;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import java.util.List;
+
 public class VetRepositoryImpl implements VetRepository {
 
     @Override
@@ -26,6 +28,13 @@ public class VetRepositoryImpl implements VetRepository {
             }
         }
 
+    }
+    @Override
+    public List<Vet> getAllVets() {
+        try (Session session = SessionManager.getSessionFactory().openSession()) {
+            List<Vet> allVets = session.createQuery("FROM Vet", Vet.class).getResultList();
+            return allVets;
+        }
     }
 
 }
