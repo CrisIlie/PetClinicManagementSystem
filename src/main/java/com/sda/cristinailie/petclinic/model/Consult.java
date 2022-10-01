@@ -7,17 +7,20 @@ import java.sql.Date;
 @Table(name = "consult")
 public class Consult {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private int id;
+    private Integer id;
     @Column (name = "date")
     private Date date;
     @Column (name = "description")
     private String description;
 
-    public Consult(int id, Date date, String description) {
+    public Consult(Integer id, Date date, String description, Vet vet, Pet pet) {
         this.id = id;
         this.date = date;
         this.description = description;
+        this.vet = vet;
+        this.pet = pet;
     }
 
     @ManyToOne
@@ -32,11 +35,11 @@ public class Consult {
 
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
