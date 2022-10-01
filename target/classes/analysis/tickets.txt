@@ -10,10 +10,10 @@ DONE PCSM_3: setup application architecture;
 _______________________________________________________________________________________________
 DONE PCSM_4: implement a way for the user to interact with the system.
 DONE PCMS_5: as a user I should be able to add a new veterinarian. I should be able to specify: first_name, last_name, address, speciality;
-PCMS_6: as a user I should be able to view the details of an existing veterinarian. I should be able to view the following details: id, first_name, last_mane, address, speciality.
+DONE PCMS_6: as a user I should be able to view the details of an existing veterinarian. I should be able to view the following details: id, first_name, last_mane, address, speciality.
 PCMS_7: as a user I should be able to update all existing veterinarian by id. I should be able to edit first_name, last_mane, address, speciality.
 PCMS_8: as a user I should be able to delete an existing veterinarian by choosing the id.
-DONE PCMS_9: as a user I should be able to view all vets. I should be able to view the following data: id, first_name, last_mane.
+DONE PCMS_9: as a user I should be able to view all vets. I should be able to view the following data: id, first_name, last_name.
 ______________________________________________________________________________________________
 PCMS_10: as a user I should be able to add a new pet. I should be able to specify: race, birthdate, isVaccinated, ownerName;
 PCMS_11: as a user I should be able to view the details of an existing pet. I should be able to view the following details: id, race, birthdate, isVaccinated, ownerName.

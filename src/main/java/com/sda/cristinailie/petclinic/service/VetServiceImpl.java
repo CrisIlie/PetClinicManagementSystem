@@ -17,16 +17,16 @@ public class VetServiceImpl implements VetService {
 
     @Override
     public void createVet(String firstName, String lastName, String address, String speciality) {
-        if (firstName == null || firstName.isEmpty()) {
+        if (firstName == null || firstName.isBlank()) {
             throw new IllegalArgumentException("First Name is invalid.");
         }
-        if (lastName == null || lastName.isEmpty()) {
+        if (lastName == null || lastName.isBlank()) {
             throw new IllegalArgumentException("Last Name is invalid.");
         }
-        if (address == null || address.isEmpty()) {
+        if (address == null || address.isBlank()) {
             throw new IllegalArgumentException("Address is invalid.");
         }
-        if (speciality == null || speciality.isEmpty()) {
+        if (speciality == null || speciality.isBlank()) {
             throw new IllegalArgumentException("Speciality is invalid.");
         }
         vetRepository.createVet(firstName, lastName, address, speciality);
@@ -41,6 +41,26 @@ public class VetServiceImpl implements VetService {
     @Override
     public Optional<Vet> findById(int id) {
        return vetRepository.findById(id);
+    }
+
+    @Override
+    public void updateVetById(int id, String firstName, String lastName, String address, String speciality) {
+        if(id<=0 ){
+            throw  new IllegalArgumentException("Id is invalid.");
+        }
+        if (firstName == null || firstName.isBlank()) {
+            throw new IllegalArgumentException("First Name is invalid.");
+        }
+        if (lastName == null || lastName.isBlank()) {
+            throw new IllegalArgumentException("Last Name is invalid.");
+        }
+        if (address == null || address.isBlank()) {
+            throw new IllegalArgumentException("Address is invalid.");
+        }
+        if (speciality == null || speciality.isBlank()) {
+            throw new IllegalArgumentException("Speciality is invalid.");
+        }
+        vetRepository.updateVetById(id, firstName, lastName, address, speciality);
     }
 }
 

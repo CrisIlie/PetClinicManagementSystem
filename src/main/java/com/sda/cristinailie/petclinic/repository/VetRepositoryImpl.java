@@ -47,5 +47,28 @@ public class VetRepositoryImpl implements VetRepository {
         }
     }
 
+    @Override
+    public void updateVetById(int id, String firstName, String lastName, String address, String speciality) {
+        try (Session session = SessionManager.getSessionFactory().openSession()){
+            Vet vet = session.find(Vet.class, id);
+            if(vet != null){
+                Transaction transaction = session.beginTransaction();
+                try {
+                    vet.setFirstName(firstName);
+                    vet.setLastName(lastName);
+                    vet.setAddress(address);
+                    vet.setSpeciality(speciality);
+                    session.saveOrUpdate(vet);
+                    transaction.commit();
+                }catch (Exception e){
+                    transaction.rollback();
+                    throw new IllegalStateException(e);
+                }
+            } else{
+                throw  new IllegalArgumentException("VET ID NOT FOUND IN DATABASE!");
+            }
+        }
+    }
+
 
 }

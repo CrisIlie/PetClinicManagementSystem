@@ -57,4 +57,27 @@ public class VetController {
             System.err.println("Internal server error!");
         }
     }
+
+    public void updateVetById(){
+       try {
+           System.out.println("Please insert the id: ");
+           int id = Integer.parseInt(scanner.nextLine().trim());
+           System.out.println("Please insert vet first name: ");
+           String firstName = scanner.nextLine();
+           System.out.println("Please insert vet last name: ");
+           String lastName = scanner.nextLine();
+           System.out.println("Please insert vest address: ");
+           String address = scanner.nextLine();
+           System.out.println("Please insert vet speciality: ");
+           String speciality = scanner.nextLine();
+
+           vetService.updateVetById(id, firstName, lastName, address, speciality);
+       }catch(NumberFormatException e){
+           System.err.println("Invalid id format!");
+       }catch (IllegalArgumentException e){
+           System.out.println(e.getMessage());
+       }catch (Exception e){
+           System.err.println("Internal server error!");
+       }
+    }
 }
