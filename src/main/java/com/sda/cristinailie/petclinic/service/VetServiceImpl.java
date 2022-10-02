@@ -5,6 +5,10 @@ import com.sda.cristinailie.petclinic.repository.VetRepository;
 import com.sda.cristinailie.petclinic.utils.SessionManager;
 import org.hibernate.Session;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.Optional;
 
@@ -71,6 +75,22 @@ public class VetServiceImpl implements VetService {
         vetRepository.deleteById(id);
     }
 
+    @Override
+    public void importVets() throws IOException {
+        Path filePath = Paths.get("C:\\Users\\Home\\Documents\\GitHub\\PetClinicManagementSystem\\src\\main\\resources\\Data\\Vets.txt");
+        Files.lines(filePath)
+                .skip(1)
+                .map(line -> line.split("\\|"))
+                .forEach(lineElements -> {
+                    if(lineElements.length == 4){
+                        String firstName = lineElements[0];
+                        String lastName = lineElements[1];
+                        String address = lineElements[2];
+                        String speciality = lineElements[3];
+                        createVet(firstName, lastName, address, speciality);
+                    }
+                });
 
+    }
 }
 

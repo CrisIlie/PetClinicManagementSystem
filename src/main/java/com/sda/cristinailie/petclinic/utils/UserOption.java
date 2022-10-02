@@ -11,6 +11,8 @@ public enum UserOption {
     DELETE_VET_BY_ID(5, "Delete vet by id"),
 
     ADD_PET(6, "Add a new pet"),
+    IMPORT_VETS(7, "Import vets"),
+    IMPORT_PETS(8, "Import pets"),
     EXIT(99, "Exit"),
     UNKNOWN(9999999, "Invalid option selected!");
     private final int numericOption;

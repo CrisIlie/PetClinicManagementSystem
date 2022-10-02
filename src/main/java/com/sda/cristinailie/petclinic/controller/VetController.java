@@ -3,6 +3,7 @@ package com.sda.cristinailie.petclinic.controller;
 import com.sda.cristinailie.petclinic.model.Vet;
 import com.sda.cristinailie.petclinic.service.VetService;
 
+import java.io.IOException;
 import java.util.Optional;
 import java.util.Scanner;
 
@@ -92,6 +93,16 @@ public class VetController {
             System.out.println(e.getMessage());
         } catch (Exception e) {
             System.err.println("Internal server error!");
+        }
+    }
+
+    public void importVets() {
+        try {
+            System.out.println("Import vets started!");
+            vetService.importVets();
+            System.out.println("Import vets finished!");
+        } catch (IOException e) {
+            System.out.println("Import vets failed!");
         }
     }
 }

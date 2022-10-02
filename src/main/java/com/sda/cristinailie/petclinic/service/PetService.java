@@ -1,5 +1,6 @@
 package com.sda.cristinailie.petclinic.service;
 
+import java.io.IOException;
 import java.sql.Date;
 
 public interface PetService {
@@ -10,4 +11,5 @@ public interface PetService {
             boolean isVaccinated,
             String ownerName);
 
+    void importPets() throws IOException;
 }

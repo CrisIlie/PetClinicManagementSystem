@@ -2,6 +2,7 @@ package com.sda.cristinailie.petclinic.controller;
 
 import com.sda.cristinailie.petclinic.service.PetService;
 
+import java.io.IOException;
 import java.sql.Date;
 import java.text.ParseException;
 import java.time.DateTimeException;
@@ -37,7 +38,16 @@ public class PetController {
         } catch (Exception e) {
             System.err.println(" INTERNAL SERVER ERROR" + e.getMessage());
         }
+    }
 
+    public void importPets() {
+        try {
+            System.out.println("Import pets started.");
+            petService.importPets();
+            System.out.println("Import pets finished!");
+        }catch(IOException e){
+            System.out.println("Import pets failed!");
+        }
     }
 
 }
