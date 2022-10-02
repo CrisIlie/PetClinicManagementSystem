@@ -1,7 +1,10 @@
 package com.sda.cristinailie.petclinic;
 
+import com.sda.cristinailie.petclinic.controller.PetController;
 import com.sda.cristinailie.petclinic.controller.VetController;
+import com.sda.cristinailie.petclinic.repository.PetRepositoryImpl;
 import com.sda.cristinailie.petclinic.repository.VetRepositoryImpl;
+import com.sda.cristinailie.petclinic.service.PetServiceImpl;
 import com.sda.cristinailie.petclinic.service.VetServiceImpl;
 import com.sda.cristinailie.petclinic.utils.SessionManager;
 import com.sda.cristinailie.petclinic.utils.UserOption;
@@ -13,6 +16,9 @@ public class Main {
         SessionManager.getSessionFactory();
 
         VetController vetController = new VetController(new VetServiceImpl(new VetRepositoryImpl()));
+
+        PetController petController = new PetController(new PetServiceImpl(new PetRepositoryImpl()));
+
 
         UserOption userOption;
         Scanner scanner = new Scanner(System.in);
@@ -40,6 +46,9 @@ public class Main {
                     break;
                 case DELETE_VET_BY_ID:
                     vetController.deleteVetById();
+                    break;
+                case ADD_PET:
+                    petController.createPet();
                     break;
                 case UNKNOWN:
                     System.err.println("Invalid option selected!");
