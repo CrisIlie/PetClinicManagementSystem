@@ -24,6 +24,6 @@ ________________________________________________________________________________
 PCMS_15: As a user I should be able to add a new consult. I should be able to specify: consult_id, vet_id of an existing vet, pet_id of an existing pet, date, description.
 TODO PCMS_16: As a user I should be able to view all the consults. I should be able to view the following data: vet_id of an existing vet, pet_id of an existing pet, date, description
 TODO PCMS_17: As a user I should be able to update the description for a specific consult by choosing the id.
-PCMS_18: As a user I should be able to import all the data from a CSV file.
+DONE PCMS_18: As a user I should be able to import all the data from a CSV file.
 
 */
